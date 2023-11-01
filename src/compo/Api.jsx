@@ -7,6 +7,7 @@ const Api = () => {
   const [imageUrls, setImageUrls] = useState([]);
   const [size, setSize] = useState("50");
   const [size1, setSize1] = useState("1");
+  const [upsacle, setupsacle] = useState(false);
   const [prompt, setPrompt] = useState("");
   const [negative, setNegative] = useState("");
   const [isLoading, setIsLoading] = useState(false); // 로딩 상태를 관리하는 상태 변수
@@ -23,7 +24,7 @@ const Api = () => {
           prompt: prompt,
           negative_prompt: negative,
           image_format: "png",
-          upscale: true,
+          upscale: upsacle,
           samples: size1,
         },
         {
@@ -39,6 +40,7 @@ const Api = () => {
 
       // Set the image URL state
       setImageUrls(imageUrl);
+      console.log('upscale state : ',upsacle)
     } catch (error) {
       console.error(error);
     } finally {
@@ -51,7 +53,7 @@ const Api = () => {
       <div className="imgs">
         {isLoading ? ( // 로딩 상태에 따라 로딩 이미지 또는 생성된 이미지를 표시
           <div className="loading">
-            <img src="resource.gif" alt="Loading" />
+            <img src="funder-the-sea-octopus.gif" alt="Loading" className="lodingimg"/>
             {/* <p>Loading...</p> */}
           </div>
         ) : (
@@ -110,6 +112,10 @@ const Api = () => {
             }}
           />
           <p>{size1}</p>
+          <div>
+            <input type="checkbox" id="" onChange={(e)=>{setupsacle(e.target.checked)}}/>
+            <span>upscale</span>
+          </div>
           <div className="btn1">
             <button type="submit" className="submit">
               Generate Image

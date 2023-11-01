@@ -20,11 +20,13 @@
   flex-direction: column;
   width: 500px;
   justify-content: center;
+
 }
 
 .in-1{
   height: 50px;
   padding: 10px;
+  resize: none;
 }
 
 textarea{
@@ -44,4 +46,9 @@ border-radius: 0.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.lodingimg{
+  width: 512px;
+  height: 512px;
 }
