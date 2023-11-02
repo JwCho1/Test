@@ -1,54 +1,146 @@
-.img{
+body {
+  margin: 0;
+}
+
+.img {
   width: 500px;
   height: 500px;
 }
 
-.imgs{
+.imgs {
   display: flex;
   justify-content: center;
 }
 
-
-.scale{
-  display: flex;
-  width: 500px;
-  justify-content: center;
-}
-
-.prompt{
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-  justify-content: center;
-
-}
-
-.in-1{
-  height: 50px;
+.in-1 {
   padding: 10px;
+  width: 1023px;
+  height: 44px;
   resize: none;
+  border: none;
+  border-radius: 10px;
+  background: #f5f5f5;
 }
 
-textarea{
-border-radius: 0.8rem;
-	border: 1px solid black;
+textarea {
+  border-radius: 0.8rem;
+  border: 1px solid black;
   resize: vertical;
 }
 
-.btn1{
- display: flex;
- justify-content: flex;
- margin-left: 20px;
- width: 500px;
+textarea::placeholder{
+  color : #d9d9d9;
 }
 
-.form{
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lodingimg {
+  width: 512px;
+  height: 512px;
+}
+
+.submit {
+  background: #0288d1;
+  border: none;
+  border-radius: 10px;
+  width: 180px;
+  height: 51px;
+  color: white;
+  padding: 10px 15px;
+}
+
+.fontstyles {
+  color: black;
+  font-family: Pretendard;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+h1 {
+  color: #000;
+  font-family: Pretendard;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#upscale {
+  position: relative;
+  left: 20px;
+}
+
+.Api__Generate {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.Api__Generate img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.Setting {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.Setting div{
+  width: 100%;
+  color: #E9E9E9;
+  border-top: 1px solid;
+}
+
+.Setting__opstion{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  display: none;
+}
+
+.Setting__opstion button{
+  width: 30px;
+  height: 30px;
+}
+
+.active__img{
+  width: 24px;
+  height: 24px;
+  transform: rotate(180deg);
+}
+
+.side {
+  background: grey;
+  height: 1500px;
+  width: 200px;
+  position: fixed;
+}
+
+.container {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.lodingimg{
-  width: 512px;
-  height: 512px;
+.Generate-active{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 10px;
+  width: 180px;
+  height: 51px;
+  color: white;
+  background: #0288D1;
 }
+
